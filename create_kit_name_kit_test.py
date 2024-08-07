@@ -13,6 +13,7 @@ def positive_assert(name):
     kit_body = get_kit_body(name)
     kit_response = sender_stand_request.post_new_client_kit(kit_body)
     assert kit_response.status_code == 201
+    assert kit_response.json()["name"] == kit_body["name"]
 
 # Función de prueba negativa para parametro name
 def negative_assert_code_400(name):
@@ -52,7 +53,9 @@ def test_7_name_numbers_allowed_get_success_response():
 
 #Prueba 8: El parámetro no se pasa en la solicitud{}:
 def test_8_name_request_empty_get_error_response():
-    negative_assert_code_400()
+    kit_body = data.kit_body.copy()
+    kit_body.pop("name")
+    negative_assert_code_400(kit_body)
 
 #Prueba 9: Se ha pasado un tipo de parámetro diferente(número):
 def test_9_name_different_type_get_error_response():
