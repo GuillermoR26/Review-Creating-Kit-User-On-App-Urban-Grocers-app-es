@@ -9,3 +9,7 @@ Pruebas de creacion de un KIT en un usuario/a de acuerdo al apartado "name"
 - La pruebas se ejecutan en el archivo "create_kit_name_kit_test.py"
 
 Nota: Uso de usuario/a {'authToken'} se genera en junto con el requerimiento para las pruebas (tests).
+
+### Conlusion:
+
+En este proyecto se reviso solo el aspecto de la creacion de un kit de un usuario en la aplicacion ficticia Urban Grocers, siendo este realizo por el software Pycharm, hojas de python, y paqueterias como pytest y request. Inspeccionando a travez de la Terminal. Obteniendo una variedad de pruebas tanto positivas como negativas.
